@@ -1,0 +1,50 @@
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt 
+img = cv2.imread('mark2.jpg')
+blur1 = cv2.GaussianBlur(img,(3,3),0)
+blur2 = cv2.GaussianBlur(img,(5,5),0)
+blur3 = cv2.GaussianBlur(img,(9,9),0)
+blur4 = cv2.GaussianBlur(img,(11,11),0)
+blur5 = cv2.GaussianBlur(blur2,(5,5),0)
+
+plt.subplot(121),plt.imshow(img),plt.title('Оригинал')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.subplot(122),plt.imshow(blur1),plt.title('Сглаженный 3на3')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(blur1, cv2.COLOR_BGR2RGB))
+plt.show()
+
+plt.subplot(121),plt.imshow(img),plt.title('Оригинал')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.subplot(122),plt.imshow(blur2),plt.title('Сглаженный 5на5')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(blur2, cv2.COLOR_BGR2RGB))
+plt.show()
+
+plt.subplot(121),plt.imshow(img),plt.title('Оригинал')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.subplot(122),plt.imshow(blur3),plt.title('Сглаженный 9на9')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(blur3, cv2.COLOR_BGR2RGB))
+plt.show()
+
+plt.subplot(121),plt.imshow(img),plt.title('Оригинал')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.subplot(122),plt.imshow(blur4),plt.title('Сглаженный 11на11')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(blur4, cv2.COLOR_BGR2RGB))
+plt.show()
+
+plt.subplot(121),plt.imshow(img),plt.title('Оригинал')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.subplot(122),plt.imshow(blur5),plt.title('Сглаженный 5на5 дважды')
+plt.xticks([]), plt.yticks([])
+plt.imshow(cv2.cvtColor(blur5, cv2.COLOR_BGR2RGB))
+plt.show()
+
